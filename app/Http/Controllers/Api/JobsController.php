@@ -21,7 +21,20 @@ class JobsController extends Controller
 
     public function store(Request $request)
     {
+        $jobs = Jobs::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'company_name' => $request->company_name,
+            'job_portal' => $request->job_portal,
+            'work_type' => $request->work_type,
+            'work_mode' => $request->work_mode,
+            'salary_range' => $request->salary_range,
+            'notes' => $request->notes,
+            'status' => $request->status
+        ]);
 
+        $jobs->save();
+        return response()->json($jobs, 200);
     }
 
     public function show(string $id)
