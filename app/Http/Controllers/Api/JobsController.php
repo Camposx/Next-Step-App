@@ -51,6 +51,7 @@ class JobsController extends Controller
 
     public function destroy(string $id)
     {
-
+        $jobs = Jobs::find($id);
+        $jobs->delete();
     }
 }
