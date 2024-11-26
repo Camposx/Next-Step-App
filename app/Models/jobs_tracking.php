@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class jobs-tracking extends Model
+class jobs_tracking extends Model
 {
     //
 }
