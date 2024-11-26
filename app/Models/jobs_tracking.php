@@ -12,7 +12,7 @@ class Jobs_tracking extends Model
         return $this->belongsTo(Jobs::class);
     }
 
-    protected $table = 'jobs';
+    protected $table = 'jobs-trackings';
 
     protected $fillable = [
         'step_name',
