@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jobs_trackings', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('job_id');
+            $table->unsignedBigInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs');
             $table->string('step_name');
             $table->text('notes');
