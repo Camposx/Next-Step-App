@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('job_portal');
             $table->string('work_type');
             $table->string('work_mode');
-            $table->string('salary_range')->nullable();
+            $table->string('salary_range');
             $table->text('notes');
-            $table->boolean('status');
+            $table->string('status');
             $table->timestamps();
         });
     }
