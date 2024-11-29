@@ -17,6 +17,7 @@ class Jobs_tracking extends Model
     protected $table = 'jobs-trackings';
 
     protected $fillable = [
+        'job_id',
         'step_name',
         'notes',
         'track_status'
