@@ -11,8 +11,8 @@ Route::delete('/jobs/{id}' ,[JobsController::class, 'destroy'])->name('apidestro
 Route::put('/jobs/{id}' ,[JobsController::class, 'update'])->name('apiupdate');
 Route::get('/jobs/{id}' ,[JobsController::class, 'show'])->name('apishow');
 
-Route::get('/job-tracker' ,[JobTrackingController::class, 'index'])->name('apihome');
-Route::post('/job-tracker' ,[JobTrackingController::class, 'store'])->name('apistore');
-Route::delete('/job-tracker/{id}' ,[JobTrackingController::class, 'destroy'])->name('apidestroy');
-Route::put('/job-tracker/{id}' ,[JobTrackingController::class, 'update'])->name('apiupdate');
-Route::get('/job-tracker/{id}' ,[JobTrackingController::class, 'show'])->name('apishow'); 
+Route::get('/job-tracker' ,[JobTrackingController::class, 'index'])->name('apihomeTrack');
+Route::post('/job-tracker' ,[JobTrackingController::class, 'store'])->name('apistoreTrack');
+Route::delete('/job-tracker/{id}' ,[JobTrackingController::class, 'destroy'])->name('apidestroyTrack');
+Route::put('/job-tracker/{id}' ,[JobTrackingController::class, 'update'])->name('apiupdateTrack');
+Route::get('/job-tracker/{id}' ,[JobTrackingController::class, 'show'])->name('apishowTrack'); 
