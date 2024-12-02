@@ -9,12 +9,14 @@
                 <th>description</th>
                 <th>status</th>
             </thead>
-            @foreach{{$jobs as $job}}
+            @foreach($jobs as $job)
             <tbody>
-                <th>{{$job->id}}</th>
-                <tr>{{$job->description}}</tr>
-                <tr>{{$job->title}}</tr>
-                <tr>{{$job->status}}</tr>
+                <tr>
+                    <th>{{$job->id}}</th>
+                    <tr>{{$job->description}}</tr>
+                    <td>{{$job->title}}</td>
+                    <td>{{$job->status}}</td>
+                </tr>
             </tbody>
             @endforeach
         </table>
