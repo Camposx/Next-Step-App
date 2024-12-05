@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Jobs_tracking;
+use App\Models\Jobs_trackings;
 
 class Jobs extends Model
 {
     use HasFactory;
 
     public function Jobs_tracking(){
-        return $this->hasMany(Jobs_Tracking::class);
+        return $this->hasMany(Jobs_Trackings::class);
     }
 
     protected $table = 'jobs';

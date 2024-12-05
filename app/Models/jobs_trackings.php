@@ -6,7 +6,7 @@ use App\Models\Jobs;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jobs_tracking extends Model
+class Jobs_trackings extends Model
 {
     use HasFactory;
     //
@@ -14,9 +14,10 @@ class Jobs_tracking extends Model
         return $this->belongsTo(Jobs::class);
     }
 
-    protected $table = 'jobs-trackings';
+    protected $table = 'jobs_trackings';
 
     protected $fillable = [
+        'job_id',
         'step_name',
         'notes',
         'track_status'
