@@ -14,4 +14,9 @@ class JobsController extends Controller
         $jobs = Jobs::all();
         return view("home", compact("jobs"));
     }
+
+    public function show(string $id){
+        $jobs = Jobs::with('Jobs_tracking')->find($id);
+        return view('show', compact('jobs'));
+    }
 }

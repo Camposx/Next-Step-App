@@ -11,7 +11,7 @@ class Jobs extends Model
     use HasFactory;
 
     public function Jobs_tracking(){
-        return $this->hasMany(Jobs_Trackings::class);
+        return $this->hasMany(Jobs_Trackings::class, 'job_id');
     }
 
     protected $table = 'jobs';

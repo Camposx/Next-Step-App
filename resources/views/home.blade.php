@@ -6,16 +6,16 @@
             <thead>
                 <th>id</th>
                 <th>title</th>
-                <th>description</th>
                 <th>status</th>
+                <th>Details</th>
             </thead>
             @foreach($jobs as $job)
             <tbody>
                 <tr>
                     <th>{{$job->id}}</th>
-                    <tr>{{$job->description}}</tr>
                     <td>{{$job->title}}</td>
                     <td>{{$job->status}}</td>
+                    <td><a href="{{ route('showJobDetail', ['id' => $job->id]) }}">Job details</a></td>
                 </tr>
             </tbody>
             @endforeach
