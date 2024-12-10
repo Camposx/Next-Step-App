@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
+    <div class="buttonDiv">
+        <a href="{{ route('home') }}"> Return</a>
+    </div>
     <div class="offerDetailed">
         <div class="jobOfferDetailed">
             <div class="offerContent">
