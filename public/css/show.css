@@ -54,3 +54,22 @@
     margin: 0;
 }
 
+.buttonDiv{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.buttonDiv a{
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    background: rgb(209,154,231);
+    background: linear-gradient(120deg, rgba(209,154,231,1) 0%, rgba(155,89,182,1) 34%, rgba(52,73,94,1) 100%);
+}
+
+.buttonDiv a:hover{
+    background: linear-gradient(120deg, rgba(52,73,94,1) 0%, rgba(155,89,182,1) 34%, rgba(209,154,231,1) 100%);
+}
