@@ -2,23 +2,23 @@
 
 @section('content')
     <div>
-        <table>
-            <thead>
-                <th>id</th>
-                <th>title</th>
-                <th>status</th>
-                <th>Details</th>
-            </thead>
-            @foreach($jobs as $job)
-            <tbody>
-                <tr>
-                    <th>{{$job->id}}</th>
-                    <td>{{$job->title}}</td>
-                    <td>{{$job->status}}</td>
-                    <td><a href="{{ route('showJobDetail', ['id' => $job->id]) }}">Job details</a></td>
-                </tr>
-            </tbody>
-            @endforeach
-        </table>
+        @foreach($jobs as $job)
+            <div class="jobOffer">
+                <div>
+                    <div class="title">
+                        <h3>{{$job->title}}</h3>
+                    </div>
+                    <div class="shortDesc">
+                        <p>{{$job->description}}</p>
+                    </div>
+                    <div class="status">
+                        <h5>{{$job->status}}</h5>
+                    </div>
+                    <div class="dateTime">
+                        <h4>{{$job->createdAt->format('d/m/Y')}}</h4>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 @endsection
