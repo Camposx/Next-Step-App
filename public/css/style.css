@@ -5,6 +5,11 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-size: 1rem;
 }
 
 body{
@@ -31,20 +36,24 @@ thead{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 2rem;
     padding: 1rem;
-    transition: ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+    border-left: 0 solid transparent;
 }
 
 .jobOffer:hover{
     border-left: 5rem solid green;
-    transition: ease-in-out 0.5s;
-
 }
 
 .status{
     background-color: var(--secondary-light);
-    width: 5rem;
+    width: 3rem;
     border-radius: 5rem;
     border: 3px solid var(--secondary);
     text-align: center;
     padding: 0.1rem 0.5rem;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
 }

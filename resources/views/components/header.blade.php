@@ -1,3 +1,3 @@
-<div>
-    <!-- Happiness is not something readymade. It comes from your own actions. - Dalai Lama -->
-</div>
+<header>
+    <h1>Next Step App</h1>
+</header>
