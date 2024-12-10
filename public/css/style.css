@@ -10,6 +10,10 @@
 }
 
 p{
+    font-size: 1rem;
+}
+
+.smallText{
     font-size: 0.7rem;
 }
 
@@ -21,7 +25,7 @@ body{
 }
 
 main{
-    min-height: 80dvh;
+    min-height: 70dvh;
     width: 70%;
     margin: 0 auto;
     padding: 3rem 0;
@@ -43,7 +47,7 @@ thead{
 }
 
 .jobOffer:hover{
-    border-left: 5rem solid green;
+    border-left: 5rem solid var(--secondary-dark);
 }
 
 .status{
@@ -78,7 +82,7 @@ thead{
     padding-bottom: 0.5rem;
 }
 
-.offerHeading h3{
+.title{
     width: 23rem;
 }
 

@@ -1,3 +1,3 @@
 <header>
-    <h1>Next Step App</h1>
+    <img src="{{ asset('assets/NextStepLogo.png')}}" alt="NextStep Logo">
 </header>

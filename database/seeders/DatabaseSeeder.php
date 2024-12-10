@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
 
         Jobs::factory(10)->create();
 
-        Jobs_trackings::factory(10)->create();
+        Jobs_trackings::factory(40)->create();
 
     }
 }

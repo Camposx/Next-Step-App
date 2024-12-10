@@ -7,28 +7,28 @@
                 <div class="jobOffer">
                         <div class="offerContent">
                             <div class="offerHeading">
-                                <h3>{{$job->title}}</h3>
-                                <p>Applied: {{$job->created_at->format('d/m/Y')}}</p>
+                                <h3 class="title">{{$job->title}}</h3>
+                                <p class="smallText">Applied: {{$job->created_at->format('d/m/Y')}}</p>
                             </div>
                             <div class="offerBody">
                                 <div class="company">
-                                    <p>Company:</p>
+                                    <p class="smallText">Company:</p>
                                     <h5>{{$job->company_name}}</h5>
                                 </div>
                                 <div class="field">
-                                    <p>Salary range: </p>
+                                    <p class="smallText">Salary range: </p>
                                     <h5>{{$job->salary_range}}</h5>
                                 </div>
                                 <div class="field">
-                                    <p>Work Type: </p>
+                                    <p class="smallText">Work Type: </p>
                                     <h5>{{$job->work_type}}</h5>
                                 </div>
                                 <div class="field">
-                                    <p>Work Mode </p>
+                                    <p class="smallText">Work Mode </p>
                                     <h5>{{$job->work_mode}}</h5>
                                 </div>
                                 <div class="field">
-                                    <p>Portal: </p>
+                                    <p class="smallText">Portal: </p>
                                     <h5>{{$job->job_portal}}</h5>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="lastUpdate">
-                                <p>Last update: {{$job->updated_at}}</p>
+                                <p class="smallText">Last update: {{$job->updated_at}}</p>
                             </div>
                         </div>
                 </div>
