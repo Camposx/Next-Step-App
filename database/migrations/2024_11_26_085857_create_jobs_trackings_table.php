@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('jobs_trackings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('job_id');
-            $table->foreign('job_id')->references('id')->on('jobs');
+            $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade')->onUpdate('cascade');
             $table->string('step_name');
             $table->text('notes');
             $table->string('track_status');
