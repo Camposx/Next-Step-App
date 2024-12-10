@@ -11,7 +11,7 @@ class JobsTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_test_CheckIfCanGetAllJobsInView(){
+    public function test_CheckIfCanGetAllJobsInView(){
         $this->withoutExceptionHandling();
 
         Jobs::factory(5)->create();
@@ -20,5 +20,16 @@ class JobsTest extends TestCase
         $response = $this->get('/');
         $response->assertStatus(200)
             ->assertViewIs('home');
+    }
+    public function test_CheckIfCanGetOneJobInView() {
+        $this->withoutExceptionHandling();
+
+        $job = Jobs::factory()->create();
+
+        $response = $this->get('/jobs/' . $job->id);
+
+        $response->assertStatus(200)
+            ->assertViewIs('show')
+            ->assertViewHas('jobs', $job);
     }
 }
