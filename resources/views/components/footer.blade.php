@@ -1,3 +1,3 @@
 <footer>
-    <p>©️Copyright by Alejandro Campos</p>
+    <p>©️ Copyright by Alejandro Campos</p>
 </footer>
