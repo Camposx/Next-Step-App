@@ -1,67 +1,170 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Next Step App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+>[!CAUTION]
+>Please read all the points of the README in order to make good use of the project. Thank you.
 
-## About Laravel
+## Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The main objective of this website is to help us with the job search, because it makes it easier for us to keep track of all the offers to which we apply, with all kinds of details.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+We can choose the status in which the offer is and add personal comments to know at all times from an accessible and quick interface to all our offers.
+### Home view
+Here we can see all the offers we have applied and if we want to see the offer with all the details just click on it.
+![image](https://github.com/user-attachments/assets/d0be2cb1-7327-43d0-8222-d81e768553e2)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Details view
+In this view you can see full detailed offer and all the tracking steps.
+![image](https://github.com/user-attachments/assets/32540923-e7df-4ac3-a67a-69acf6bda3c2)
 
-## Learning Laravel
+## Requierements
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+In order to run and try this project locally you will need:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. XAMPP (or any other local server that supports PHP and MySQL)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Operating System terminal
 
-## Laravel Sponsors
+3. Install Composer
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. Install NPM via Node.js
 
-### Premium Partners
+5. Xdebug (so you can see the tests coverage)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+6. Postman (or any other platform to use the API, like *Insomnia*)
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Clone the repository:
+```
+    git clone https://github.com/Camposx/Next-Step-App.git
+```
 
-## Code of Conduct
+2. Install Composer:
+```
+    composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Install NPM:
+```
+    npm install
+```
 
-## Security Vulnerabilities
+4. Create a '.env' file by taking the example '.env.example' file and modify the lines:
+    - DB_CONNECTION=mysql
+    - DB_DATABASE=nextstep_db
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. Create a database in MySQL with no tables
 
-## License
+6. Generate all the tables and fake values:
+```
+    php artisan migrate:fresh --seed
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Next-Step-App
+7. Run NPM:
+```
+    npm run dev
+```
+
+8. Run Laravel (in other terminal):
+```
+    php artisan serve
+```
+
+This will generate an url that will lead you to the web:
+```
+    http://127.0.0.1:8000/
+```
+
+## Database diagram
+
+![image](https://github.com/user-attachments/assets/458d4f91-f556-450f-8696-2a67a8d92c6a)
+
+##  API Endpoints
+
+As there are two tables in the database, we have 5 endpoints for each of the tables
+
+### Jobs
+
+- GET (Retrieve all jobs)
+```
+    http://127.0.0.1:8000/api/jobs
+```
+
+- GET BY ID (retrieve one job selected by ID)
+```
+    http://127.0.0.1:8000/api/jobs/{id}
+```
+
+- POST (insert a new job)
+```
+    http://127.0.0.1:8000/api/jobs
+```
+
+- PUT (update an job selected by ID)
+```
+    http://127.0.0.1:8000/api/jobs/{id}
+```
+
+- DELETE (delete an job selected by ID)
+```
+    http://127.0.0.1:8000/api/jobs/{id}
+```
+
+### Job trackings
+
+- GET (retrieve all trackings)
+```
+    http://127.0.0.1:8000/api/job-tracker
+```
+
+- GET BY ID (retrieve one tracking selected by ID)
+```
+    http://127.0.0.1:8000/api/job-tracker/{id}
+```
+
+- POST (create a new tracking on a specific job selected by ID.)
+```
+    http://127.0.0.1:8000/api/offers/{id}/job-tracker
+```
+
+- PUT (update a tracking selected by ID)
+```
+    http://127.0.0.1:8000/api/job-tracker/{id}
+```
+
+- DELETE (delete a tracking selected by ID)
+```
+    http://127.0.0.1:8000/api/job-tracker/{id}
+```
+
+## Tests
+
+This project has a **98.4%** of test coverage.
+
+You can try the tests and see the coverage in the terminal using:
+```
+   php artisan test --coverage
+```
+If you did not install xdebug just use this command without coverage.
+```
+   php artisan test
+```
+![image](https://github.com/user-attachments/assets/c5b1016a-5b80-43a2-ab2e-255c5eae1d3b)
+
+## Technologies and Tools
+
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='PHP' src='https://img.shields.io/badge/PHP-100000?style=for-the-badge&logo=PHP&logoColor=white&labelColor=777BB4&color=777BB4'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='HTML5' src='https://img.shields.io/badge/HTML5-100000?style=for-the-badge&logo=HTML5&logoColor=white&labelColor=E34F26&color=E34F26'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='CSS3' src='https://img.shields.io/badge/CSS3-100000?style=for-the-badge&logo=CSS3&logoColor=white&labelColor=1572B6&color=1572B6'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='MySQL' src='https://img.shields.io/badge/MySQL-100000?style=for-the-badge&logo=MySQL&logoColor=white&labelColor=4479A1&color=4479A1'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Laravel' src='https://img.shields.io/badge/Laravel-100000?style=for-the-badge&logo=Laravel&logoColor=white&labelColor=FF2D20&color=FF2D20'/></a>
+
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='GitHub' src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=181717&color=181717'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='phpMyAdmin' src='https://img.shields.io/badge/phpMyAdmin-100000?style=for-the-badge&logo=phpMyAdmin&logoColor=white&labelColor=6C78AF&color=6C78AF'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Postman' src='https://img.shields.io/badge/Postman-100000?style=for-the-badge&logo=Postman&logoColor=white&labelColor=FF6C37&color=FF6C37'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='XAMPP' src='https://img.shields.io/badge/XAMPP-100000?style=for-the-badge&logo=XAMPP&logoColor=white&labelColor=FB7A24&color=FB7A24'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Canva' src='https://img.shields.io/badge/Canva-100000?style=for-the-badge&logo=Canva&logoColor=white&labelColor=00C4CC&color=00C4CC'/></a>
+
+## Author
+ 
+[Alejandro Campos]([https://github.com/ArianaMartinMartinez](https://github.com/Camposx))
